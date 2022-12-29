@@ -1,0 +1,317 @@
+@import'./color.scss';
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&family=Oleo+Script&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    color: #FDFDFD;
+
+}
+
+body {
+    background-color: rgb(53, 51, 51);
+
+    .border {
+        width: 100vw;
+        // height: 100vh;
+        // border: 4px solid black;
+        background-color: rgb(40, 37, 37);
+        @include display;
+        padding: 10px;
+        background-image: url('./src/cezar-sampaio-O0JJMtM1EfU-unsplash.jpg');
+        // background-repeat: no-repeat;
+        background-size: cover;
+
+
+        .inner-border {
+            @include display;
+            width: 85%;
+            // height: 80%;
+            // border: 2px solid black;
+            // background-color: $color ;
+            flex-wrap: wrap;
+            font-family: 'Oleo Script', cursive;
+
+            .left-box {
+                @include display($flex: column);
+                margin: 10px;
+                width: 48%;
+                height: 700px;
+                // border: 2px solid gold;
+                text-transform: uppercase;
+                background-image: url('./src/sayan-majhi-KOY1fbeVMLI-unsplash.jpg');
+                background-size: cover;
+                border-radius: 10px;
+
+                p:first-child {
+                    font-size: 3.5em;
+                    word-spacing: 10px;
+                    margin: 15px;
+                    color: gold;
+
+                    @media(max-width:737px) {
+                        font-size: 2.8em;
+                    }
+                }
+
+                p:nth-child(2) {
+                    font-size: 1.5em;
+                    margin: 15px;
+                    color: gold;
+                    word-spacing: 10px;
+
+                    @media(max-width:737px) {
+                        font-size: 1em;
+                    }
+                }
+
+
+                p:last-child {
+                    font-size: 1.5em;
+                    color: gold;
+                    margin: 15px;
+                    word-spacing: 10px;
+
+                    @media(max-width:737px) {
+                        font-size: 1em;
+                    }
+                }
+
+                @media(max-width:1244px) {
+                    width: 90%;
+                    height: 450px;
+                }
+
+
+            }
+
+
+            .right-box {
+                margin: 10px;
+                width: 48%;
+                height: 700px;
+                // border: 2px solid gold;
+                border-radius: 10px;
+                background-color: rgba(0, 0, 0, 0.63);
+                @include display($flex: column);
+
+                .user {
+                    margin: 10px;
+                    width: 90%;
+                    height: 15%;
+                    // border: 2px solid white;
+                    @include display;
+
+                    #userIcon {
+                        width: 15%;
+                        height: 70%;
+                        border: 2px solid white;
+                        @include display;
+                        font-size: 2em;
+                        border-top-left-radius: 15px;
+                        border-bottom-left-radius: 15px;
+
+                        padding: 10px;
+
+                        @media(max-width:737px) {
+                            font-size: 1.4em;
+                        }
+
+                        #sp {
+                            color: red;
+
+
+                        }
+                    }
+
+                    #user {
+                        background-color: transparent;
+                        width: 85%;
+                        height: 70%;
+                        margin-right: 5px;
+                        border: 2px solid white;
+                        outline-color: rgb(3, 243, 95);
+                        outline-width: 2px;
+                        border: none;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+
+
+                    }
+
+                    #user::placeholder {
+                        color: gold;
+                        padding: 10px;
+                        padding-top: 15px;
+                        font-size: 1.5em;
+                    }
+
+                }
+
+                .email {
+                    margin: 10px;
+                    width: 90%;
+                    @include display;
+                    height: 15%;
+                    // border: 2px solid white;
+                    font-size: 2em;
+
+                    #emailIcon {
+                        width: 15%;
+                        height: 70%;
+                        border: 2px solid white;
+                        @include display;
+                        font-size: 1.5em;
+                        padding: 10px;
+                        border-top-left-radius: 15px;
+                        border-bottom-left-radius: 15px;
+
+                        @media(max-width:737px) {
+                            font-size: 0.8em;
+                        }
+
+                        #spe {
+                            color: red;
+                        }
+                    }
+
+                    #email {
+                        background-color: transparent;
+                        width: 85%;
+                        height: 70%;
+                        margin-right: 5px;
+                        border: 2px solid white;
+                        // outline-style: groove;
+                        outline-color: rgb(3, 243, 95);
+                        outline-width: 2px;
+                        border: none;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+
+                    }
+
+                    #email::placeholder {
+                        color: gold;
+                        padding: 10px;
+                        padding-top: 15px;
+                        font-size: 1.5em;
+                    }
+                }
+
+                .password {
+                    margin: 10px;
+                    width: 90%;
+                    font-size: 1.8em;
+                    height: 15%;
+                    // border: 2px solid white;
+                    @include display;
+
+                    #passwordIcon {
+                        width: 15%;
+                        padding: 5px;
+                        height: 70%;
+                        padding: 10px;
+                        border: 2px solid white;
+                        @include display;
+                        font-size: 1.5em;
+                        border-top-left-radius: 15px;
+                        border-bottom-left-radius: 15px;
+
+                        @media(max-width:737px) {
+                            font-size: 0.8em;
+                        }
+
+                        #spp {
+                            color: red;
+                        }
+                    }
+
+                    #password {
+                        background-color: transparent;
+                        width: 85%;
+                        height: 70%;
+                        margin-right: 5px;
+                        border: 2px solid white;
+                        // outline-style: groove;
+                        outline-color: rgb(3, 243, 95);
+                        outline-width: 2px;
+                        border: none;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+
+                    }
+
+                    #password::placeholder {
+                        color: gold;
+                        padding: 10px;
+                        padding-top: 15px;
+                        font-size: 1.5em;
+                    }
+                }
+
+                .forget {
+                    margin: 10px;
+                    width: 90%;
+                    height: 15%;
+                    // border: 2px solid white;
+                    @include display;
+                    font-weight: 400;
+                    font-size: 1.1em;
+                    font-family: 'Times New Roman', Times, serif;
+
+                    h1 {
+                        a {
+                            color: blue;
+                            // letter-spacing: 4px;
+
+                            &:hover {
+                                color: red;
+                            }
+                        }
+                    }
+
+                    @media(max-width:737px) {
+                        font-size: 0.6em;
+                    }
+                }
+
+                .login {
+                    margin: 10px;
+                    width: 90%;
+                    height: 15%;
+                    // border: 2px solid white;
+                    @include display;
+
+                    .loginbutton {
+                        @include display;
+                        font-size: 1.3em;
+                        text-transform: uppercase;
+                        width: 50%;
+                        height: 70%;
+                        background-color: rgba(6, 243, 89, 0.772);
+                        border: 2px solid rgb(12, 228, 12);
+                        border-radius: 20px;
+                        transition: 1.2s;
+                        cursor: pointer;
+                        box-shadow: 2px 2px 1px 1px white, 4px 4px 2px 2px rgb(82, 76, 76);
+
+                        &:hover {
+                            background-color: rgba(6, 243, 89, 0.274);
+                            box-shadow: 2px 2px 1px 1px white, 4px 4px 2px 2px rgb(82, 76, 76);
+                        }
+
+                        @media(max-width:737px) {
+                            font-size: 0.8em;
+                        }
+
+                    }
+                }
+
+                @media(max-width:1244px) {
+                    width: 90%;
+                }
+            }
+
+        }
+    }
+}

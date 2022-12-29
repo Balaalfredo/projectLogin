@@ -1,0 +1,8 @@
+$color: #1A1A1A;
+
+@mixin display($display: flex, $justify: center, $align: center, $flex: row) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $flex;
+}
