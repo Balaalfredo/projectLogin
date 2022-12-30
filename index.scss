@@ -1,10 +1,15 @@
 @import'./color.scss';
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+
+
 
 
 * {
     box-sizing: border-box;
     color: #FDFDFD;
+
 
 }
 
@@ -18,47 +23,153 @@ body {
         background-color: rgb(40, 37, 37);
         @include display;
         padding: 10px;
-        background-image: url('./src/cezar-sampaio-O0JJMtM1EfU-unsplash.jpg');
-        // background-repeat: no-repeat;
+        background-image: url('./src/pexels-aleksandar-pasaric-325185.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
         background-size: cover;
 
 
         .inner-border {
             @include display;
+
             width: 85%;
             // height: 80%;
             // border: 2px solid black;
             // background-color: $color ;
             flex-wrap: wrap;
-            font-family: 'Oleo Script', cursive;
+
+
+
+            .star {
+                width: 60px;
+                transform: translate(-50%, -50%);
+                height: 60px;
+                border: 4px solid red;
+                border-radius: 50%;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 0.5em;
+                color: white;
+                transition: 1.2s;
+                background-color: rgba(0, 0, 0, 0.461);
+            }
+
+            .selectanimation {
+                animation: starr infinite linear;
+                animation-duration: 2s;
+                box-shadow: 2px 2px 2px 2px black;
+            }
+
+            @keyframes starr {
+                0% {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                25% {
+                    width: 75px;
+                    height: 75px;
+                }
+
+                50% {
+                    width: 90px;
+                    height: 90px;
+                }
+
+                75% {
+                    width: 105px;
+                    height: 105px;
+                }
+
+
+
+                100% {
+                    width: 130px;
+                    height: 130px;
+                }
+            }
+
 
             .left-box {
-                @include display($flex: column);
+                @include display($flex: column, $justify: space-evenly);
                 margin: 10px;
                 width: 48%;
                 height: 700px;
+                font-family: 'Kalam', cursive;
                 // border: 2px solid gold;
                 text-transform: uppercase;
-                background-image: url('./src/sayan-majhi-KOY1fbeVMLI-unsplash.jpg');
-                background-size: cover;
+                // background-color: rgba(0, 0, 0, 0.779);
+                // background-color: rgba(0, 0, 255, 0.326);
+                background: conic-gradient(rgba(49, 49, 231, 0.514), rgba(0, 0, 255, 0.258), rgba(45, 45, 172, 0.418));
+                // background-image: url('./src/sayan-majhi-KOY1fbeVMLI-unsplash.jpg');
+                // background-size: cover;
                 border-radius: 10px;
+                box-shadow: -6px 3px 2px 2px black, -8px 6px 2px 2px black;
+                text-align: center;
 
-                p:first-child {
+
+
+                .para1 {
                     font-size: 3.5em;
                     word-spacing: 10px;
-                    margin: 15px;
-                    color: gold;
+                    // margin: 15px;
+                    color: rgba(255, 0, 191, 0.808);
+                    text-shadow: 2px 1px 1px black, 10px 1px 1px black;
+                    font-weight: 750;
+                    letter-spacing: 6px;
+                    cursor: pointer;
+                    transition: 1.5s;
+
+
 
                     @media(max-width:737px) {
                         font-size: 2.8em;
                     }
                 }
 
-                p:nth-child(2) {
-                    font-size: 1.5em;
-                    margin: 15px;
-                    color: gold;
+
+
+                @keyframes movv {
+                    0% {
+                        color: orangered;
+                        transform: scale(1);
+                    }
+
+                    25% {
+                        transform: scale(1.1);
+                        color: gold;
+                    }
+
+                    50% {
+                        transform: scale(1.2);
+                        color: blue;
+                    }
+
+                    75% {
+                        transform: scale(1.3);
+                        color: pink;
+                    }
+
+                    100% {
+                        transform: scale(1.4);
+                        color: red;
+
+                    }
+                }
+
+                .para2 {
+                    font-size: 2.2em;
+                    // margin: 15px;
+                    color: rgba(200, 255, 0, 0.9);
+                    text-shadow: 2px 1px 1px black, 10px 1px 1px black;
                     word-spacing: 10px;
+                    font-weight: 650;
+                    letter-spacing: 6px;
+                    cursor: pointer;
+
+                    transition: 1.5s;
 
                     @media(max-width:737px) {
                         font-size: 1em;
@@ -66,11 +177,16 @@ body {
                 }
 
 
-                p:last-child {
-                    font-size: 1.5em;
-                    color: gold;
-                    margin: 15px;
+                .para3 {
+                    font-size: 1.7em;
+                    cursor: pointer;
+                    transition: 1.5s;
+                    color: rgba(0, 255, 191, 0.865);
+                    // margin: 15px;
+                    text-shadow: 2px 1px 1px black, 8px 1px 1px black;
                     word-spacing: 10px;
+                    font-weight: 650;
+                    letter-spacing: 6px;
 
                     @media(max-width:737px) {
                         font-size: 1em;
@@ -79,9 +195,53 @@ body {
 
                 @media(max-width:1244px) {
                     width: 90%;
-                    height: 450px;
+                    height: 550px;
                 }
 
+                .selectitalic {
+                    font-style: italic;
+                    font-family: cursive;
+                    transition: 1.2s;
+                    text-transform: capitalize;
+                    text-decoration: overline;
+                    animation: movv infinite linear;
+                    animation-duration: 3.2s;
+                }
+
+                // .disco {
+                //     // margin-bottom: 40px;
+                //     width: 120px;
+                //     height: 60px;
+                //     border: 3px solid rgba(255, 255, 255, 0.352);
+                //     border-radius: 50px;
+                //     position: relative;
+                //     display: flex;
+                //     justify-content: space-around;
+                //     align-items: center;
+
+                //     p {
+                //         margin: 10px;
+                //         font-size: 2em;
+                //     }
+
+                //     .cir {
+                //         position: absolute;
+                //         width: 50px;
+                //         left: 3px;
+                //         transition: 1.2s;
+                //         top: 2px;
+                //         cursor: pointer;
+                //         background-color: rgba(0, 0, 0, 0.429);
+                //         height: 50px;
+                //         border-radius: 50%;
+                //         border: 4px solid rgba(255, 255, 255, 0.507);
+                //     }
+
+                //     .selectcir {
+                //         left: 60px;
+                //         background-color: rgba(0, 0, 0, 0.429);
+                //     }
+                // }
 
             }
 
@@ -89,11 +249,18 @@ body {
             .right-box {
                 margin: 10px;
                 width: 48%;
+                transition: 1.2s;
                 height: 700px;
                 // border: 2px solid gold;
                 border-radius: 10px;
-                background-color: rgba(0, 0, 0, 0.63);
+                // background-color: rgba(0, 0, 0, 0.779);
+                background: conic-gradient(rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.655), rgba(0, 0, 0, 0.267));
+                overflow: hidden;
                 @include display($flex: column);
+                position: relative;
+                box-shadow: -6px 3px 2px 2px black, -8px 6px 2px 2px black;
+
+
 
                 .user {
                     margin: 10px;
@@ -101,13 +268,21 @@ body {
                     height: 15%;
                     // border: 2px solid white;
                     @include display;
+                    transition: 0.4s;
+
+
+                    @media(max-width:1244px) {
+                        margin: 30px;
+                    }
 
                     #userIcon {
                         width: 15%;
                         height: 70%;
-                        border: 2px solid white;
+                        border: 3px solid gold;
+                        box-shadow: 0px 3px 1px 2px black;
                         @include display;
                         font-size: 2em;
+                        cursor: pointer;
                         border-top-left-radius: 15px;
                         border-bottom-left-radius: 15px;
 
@@ -118,34 +293,48 @@ body {
                         }
 
                         #sp {
-                            color: red;
+                            text-shadow: 3px 3px 3px black;
+                        }
 
-
+                        &:hover {
+                            background-color: rgba(88, 83, 83, 0.379);
                         }
                     }
 
-                    #user {
+
+
+                    .userr {
                         background-color: transparent;
-                        width: 85%;
+                        width: 0%;
                         height: 70%;
+                        transition: 1s;
                         margin-right: 5px;
                         border: 2px solid white;
                         outline-color: rgb(3, 243, 95);
                         outline-width: 2px;
                         border: none;
+                        outline: none;
+                        border-bottom: 4px solid rgb(200, 255, 0);
+
                         border-top-right-radius: 15px;
                         border-bottom-right-radius: 15px;
 
 
+
                     }
 
-                    #user::placeholder {
+                    .userr::placeholder {
                         color: gold;
                         padding: 10px;
                         padding-top: 15px;
                         font-size: 1.5em;
                     }
 
+                    .selectuser {
+                        width: 85%;
+                        transition: 1s;
+                        box-shadow: 1px 3px 4px 2px black;
+                    }
                 }
 
                 .email {
@@ -154,47 +343,70 @@ body {
                     @include display;
                     height: 15%;
                     // border: 2px solid white;
-                    font-size: 2em;
+                    font-size: 1.2em;
+                    transition: 0.4s;
+
+                    @media(max-width:1244px) {
+                        margin: 30px;
+                    }
 
                     #emailIcon {
                         width: 15%;
                         height: 70%;
-                        border: 2px solid white;
+
                         @include display;
-                        font-size: 1.5em;
+                        font-size: 1.3em;
+                        border: 3px solid gold;
+                        box-shadow: 0px 3px 1px 2px black;
                         padding: 10px;
                         border-top-left-radius: 15px;
                         border-bottom-left-radius: 15px;
+                        cursor: pointer;
+
+
 
                         @media(max-width:737px) {
                             font-size: 0.8em;
                         }
 
                         #spe {
-                            color: red;
+                            text-shadow: 3px 3px 3px black;
+                        }
+
+                        &:hover {
+                            background-color: rgba(88, 83, 83, 0.379);
                         }
                     }
 
-                    #email {
+                    .emaill {
                         background-color: transparent;
-                        width: 85%;
+                        width: 0%;
                         height: 70%;
                         margin-right: 5px;
-                        border: 2px solid white;
+
                         // outline-style: groove;
                         outline-color: rgb(3, 243, 95);
                         outline-width: 2px;
                         border: none;
+                        border-bottom: 4px solid rgb(200, 255, 0);
+                        outline: none;
+                        transition: 1s;
                         border-top-right-radius: 15px;
                         border-bottom-right-radius: 15px;
 
                     }
 
-                    #email::placeholder {
+                    .emaill::placeholder {
                         color: gold;
                         padding: 10px;
                         padding-top: 15px;
                         font-size: 1.5em;
+                    }
+
+                    .selectemail {
+                        transition: 1se;
+                        width: 85%;
+                        box-shadow: 1px 3px 4px 2px black;
                     }
                 }
 
@@ -205,47 +417,70 @@ body {
                     height: 15%;
                     // border: 2px solid white;
                     @include display;
+                    transition: 0.8s;
+
+                    @media(max-width:1244px) {
+                        margin: 30px;
+                    }
+
+
 
                     #passwordIcon {
                         width: 15%;
                         padding: 5px;
                         height: 70%;
                         padding: 10px;
-                        border: 2px solid white;
+                        border: 3px solid gold;
+                        box-shadow: 0px 3px 1px 2px black;
                         @include display;
-                        font-size: 1.5em;
+                        font-size: 1em;
                         border-top-left-radius: 15px;
                         border-bottom-left-radius: 15px;
+                        cursor: pointer;
 
                         @media(max-width:737px) {
                             font-size: 0.8em;
                         }
 
                         #spp {
-                            color: red;
+                            text-shadow: 3px 3px 3px black;
+                        }
+
+                        &:hover {
+                            background-color: rgba(88, 83, 83, 0.379);
                         }
                     }
 
-                    #password {
+                    .passwordd {
                         background-color: transparent;
-                        width: 85%;
+                        width: 0%;
                         height: 70%;
+                        outline: none;
                         margin-right: 5px;
                         border: 2px solid white;
                         // outline-style: groove;
                         outline-color: rgb(3, 243, 95);
                         outline-width: 2px;
                         border: none;
+                        transition: 1.2s;
+                        border-bottom: 4px solid rgb(200, 255, 0);
+
                         border-top-right-radius: 15px;
                         border-bottom-right-radius: 15px;
 
                     }
 
-                    #password::placeholder {
+                    .passwordd::placeholder {
                         color: gold;
                         padding: 10px;
                         padding-top: 15px;
                         font-size: 1.5em;
+                    }
+
+                    .selectpassword {
+                        transition: 1s;
+                        width: 85%;
+                        box-shadow: 1px 3px 4px 2px black;
                     }
                 }
 
@@ -257,11 +492,17 @@ body {
                     @include display;
                     font-weight: 400;
                     font-size: 1.1em;
-                    font-family: 'Times New Roman', Times, serif;
+                    font-family: 'Sevillana', cursive;
+
+                    @media(max-width:1244px) {
+                        margin: 30px;
+                    }
 
                     h1 {
                         a {
-                            color: blue;
+                            color: rgb(22, 155, 237);
+                            text-decoration: none;
+                            text-shadow: 2px 2px 2px black;
                             // letter-spacing: 4px;
 
                             &:hover {
@@ -280,24 +521,29 @@ body {
                     width: 90%;
                     height: 15%;
                     // border: 2px solid white;
-                    @include display;
+                    @include display($justify: space-around);
+
+                    @media(max-width:1244px) {
+                        margin: 30px;
+                    }
 
                     .loginbutton {
                         @include display;
                         font-size: 1.3em;
                         text-transform: uppercase;
-                        width: 50%;
+                        width: 40%;
                         height: 70%;
-                        background-color: rgba(6, 243, 89, 0.772);
-                        border: 2px solid rgb(12, 228, 12);
+                        background: linear-gradient(rgba(49, 49, 251, 0.518), rgba(170, 0, 255, 0.468), rgba(0, 110, 255, 0.436));
+                        border: 2px solid rgba(0, 0, 0, 0.514);
                         border-radius: 20px;
                         transition: 1.2s;
                         cursor: pointer;
-                        box-shadow: 2px 2px 1px 1px white, 4px 4px 2px 2px rgb(82, 76, 76);
+
+                        box-shadow: 2px 2px 1px 1px black, 4px 4px 2px 2px rgb(82, 76, 76);
 
                         &:hover {
-                            background-color: rgba(6, 243, 89, 0.274);
-                            box-shadow: 2px 2px 1px 1px white, 4px 4px 2px 2px rgb(82, 76, 76);
+                            background: linear-gradient(rgba(49, 49, 251, 0.142), rgba(170, 0, 255, 0.838), rgba(0, 110, 255, 0.269));
+                            box-shadow: 2px 2px 1px 1px black, 4px 4px 2px 2px rgb(82, 76, 76);
                         }
 
                         @media(max-width:737px) {
@@ -305,13 +551,41 @@ body {
                         }
 
                     }
+
+
+                    .signbutton {
+                        @include display;
+                        font-size: 1.3em;
+                        text-transform: uppercase;
+                        width: 40%;
+                        height: 70%;
+                        background: linear-gradient(rgba(12, 228, 12, 0.413), rgba(12, 228, 160, 0.477), rgba(188, 228, 12, 0.4));
+                        // background-color: rgb(12, 228, 12);
+                        border: 2px solid rgba(0, 0, 0, 0.674);
+                        border-radius: 20px;
+                        transition: 1.2s;
+                        cursor: pointer;
+                        box-shadow: 2px 2px 1px 1px black, 4px 4px 2px 2px rgb(82, 76, 76);
+
+                        &:hover {
+                            background: linear-gradient(rgba(12, 228, 12, 0.731), rgba(12, 228, 160, 0.735), rgba(188, 228, 12, 0.74));
+                        }
+                    }
+
                 }
 
                 @media(max-width:1244px) {
                     width: 90%;
+                    height: 900px;
                 }
+
+
+
             }
 
         }
     }
+
+
+
 }

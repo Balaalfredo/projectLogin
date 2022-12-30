@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&family=Oleo+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sevillana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
 * {
   box-sizing: border-box;
   color: #FDFDFD;
@@ -15,7 +16,9 @@ body .border {
   align-items: center;
   flex-direction: row;
   padding: 10px;
-  background-image: url("./src/cezar-sampaio-O0JJMtM1EfU-unsplash.jpg");
+  background-image: url("./src/pexels-aleksandar-pasaric-325185.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 body .border .inner-border {
@@ -25,70 +28,208 @@ body .border .inner-border {
   flex-direction: row;
   width: 85%;
   flex-wrap: wrap;
-  font-family: "Oleo Script", cursive;
+}
+body .border .inner-border .star {
+  width: 60px;
+  transform: translate(-50%, -50%);
+  height: 60px;
+  border: 4px solid red;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.5em;
+  color: white;
+  transition: 1.2s;
+  background-color: rgba(0, 0, 0, 0.461);
+}
+body .border .inner-border .selectanimation {
+  -webkit-animation: starr infinite linear;
+          animation: starr infinite linear;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  box-shadow: 2px 2px 2px 2px black;
+}
+@-webkit-keyframes starr {
+  0% {
+    width: 60px;
+    height: 60px;
+  }
+  25% {
+    width: 75px;
+    height: 75px;
+  }
+  50% {
+    width: 90px;
+    height: 90px;
+  }
+  75% {
+    width: 105px;
+    height: 105px;
+  }
+  100% {
+    width: 130px;
+    height: 130px;
+  }
+}
+@keyframes starr {
+  0% {
+    width: 60px;
+    height: 60px;
+  }
+  25% {
+    width: 75px;
+    height: 75px;
+  }
+  50% {
+    width: 90px;
+    height: 90px;
+  }
+  75% {
+    width: 105px;
+    height: 105px;
+  }
+  100% {
+    width: 130px;
+    height: 130px;
+  }
 }
 body .border .inner-border .left-box {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   margin: 10px;
   width: 48%;
   height: 700px;
+  font-family: "Kalam", cursive;
   text-transform: uppercase;
-  background-image: url("./src/sayan-majhi-KOY1fbeVMLI-unsplash.jpg");
-  background-size: cover;
+  background: conic-gradient(rgba(49, 49, 231, 0.514), rgba(0, 0, 255, 0.258), rgba(45, 45, 172, 0.418));
   border-radius: 10px;
+  box-shadow: -6px 3px 2px 2px black, -8px 6px 2px 2px black;
+  text-align: center;
 }
-body .border .inner-border .left-box p:first-child {
+body .border .inner-border .left-box .para1 {
   font-size: 3.5em;
   word-spacing: 10px;
-  margin: 15px;
-  color: gold;
+  color: rgba(255, 0, 191, 0.808);
+  text-shadow: 2px 1px 1px black, 10px 1px 1px black;
+  font-weight: 750;
+  letter-spacing: 6px;
+  cursor: pointer;
+  transition: 1.5s;
 }
 @media (max-width: 737px) {
-  body .border .inner-border .left-box p:first-child {
+  body .border .inner-border .left-box .para1 {
     font-size: 2.8em;
   }
 }
-body .border .inner-border .left-box p:nth-child(2) {
-  font-size: 1.5em;
-  margin: 15px;
-  color: gold;
+@-webkit-keyframes movv {
+  0% {
+    color: orangered;
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+    color: gold;
+  }
+  50% {
+    transform: scale(1.2);
+    color: blue;
+  }
+  75% {
+    transform: scale(1.3);
+    color: pink;
+  }
+  100% {
+    transform: scale(1.4);
+    color: red;
+  }
+}
+@keyframes movv {
+  0% {
+    color: orangered;
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+    color: gold;
+  }
+  50% {
+    transform: scale(1.2);
+    color: blue;
+  }
+  75% {
+    transform: scale(1.3);
+    color: pink;
+  }
+  100% {
+    transform: scale(1.4);
+    color: red;
+  }
+}
+body .border .inner-border .left-box .para2 {
+  font-size: 2.2em;
+  color: rgba(200, 255, 0, 0.9);
+  text-shadow: 2px 1px 1px black, 10px 1px 1px black;
   word-spacing: 10px;
+  font-weight: 650;
+  letter-spacing: 6px;
+  cursor: pointer;
+  transition: 1.5s;
 }
 @media (max-width: 737px) {
-  body .border .inner-border .left-box p:nth-child(2) {
+  body .border .inner-border .left-box .para2 {
     font-size: 1em;
   }
 }
-body .border .inner-border .left-box p:last-child {
-  font-size: 1.5em;
-  color: gold;
-  margin: 15px;
+body .border .inner-border .left-box .para3 {
+  font-size: 1.7em;
+  cursor: pointer;
+  transition: 1.5s;
+  color: rgba(0, 255, 191, 0.865);
+  text-shadow: 2px 1px 1px black, 8px 1px 1px black;
   word-spacing: 10px;
+  font-weight: 650;
+  letter-spacing: 6px;
 }
 @media (max-width: 737px) {
-  body .border .inner-border .left-box p:last-child {
+  body .border .inner-border .left-box .para3 {
     font-size: 1em;
   }
 }
 @media (max-width: 1244px) {
   body .border .inner-border .left-box {
     width: 90%;
-    height: 450px;
+    height: 550px;
   }
+}
+body .border .inner-border .left-box .selectitalic {
+  font-style: italic;
+  font-family: cursive;
+  transition: 1.2s;
+  text-transform: capitalize;
+  text-decoration: overline;
+  -webkit-animation: movv infinite linear;
+          animation: movv infinite linear;
+  -webkit-animation-duration: 3.2s;
+          animation-duration: 3.2s;
 }
 body .border .inner-border .right-box {
   margin: 10px;
   width: 48%;
+  transition: 1.2s;
   height: 700px;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.63);
+  background: conic-gradient(rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.655), rgba(0, 0, 0, 0.267));
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  box-shadow: -6px 3px 2px 2px black, -8px 6px 2px 2px black;
 }
 body .border .inner-border .right-box .user {
   margin: 10px;
@@ -98,16 +239,24 @@ body .border .inner-border .right-box .user {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  transition: 0.4s;
+}
+@media (max-width: 1244px) {
+  body .border .inner-border .right-box .user {
+    margin: 30px;
+  }
 }
 body .border .inner-border .right-box .user #userIcon {
   width: 15%;
   height: 70%;
-  border: 2px solid white;
+  border: 3px solid gold;
+  box-shadow: 0px 3px 1px 2px black;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   font-size: 2em;
+  cursor: pointer;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   padding: 10px;
@@ -118,37 +267,48 @@ body .border .inner-border .right-box .user #userIcon {
   }
 }
 body .border .inner-border .right-box .user #userIcon #sp {
-  color: red;
+  text-shadow: 3px 3px 3px black;
 }
-body .border .inner-border .right-box .user #user {
+body .border .inner-border .right-box .user #userIcon:hover {
+  background-color: rgba(88, 83, 83, 0.379);
+}
+body .border .inner-border .right-box .user .userr {
   background-color: transparent;
-  width: 85%;
+  width: 0%;
   height: 70%;
+  transition: 1s;
   margin-right: 5px;
   border: 2px solid white;
   outline-color: rgb(3, 243, 95);
   outline-width: 2px;
   border: none;
+  outline: none;
+  border-bottom: 4px solid rgb(200, 255, 0);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-body .border .inner-border .right-box .user #user::-moz-placeholder {
+body .border .inner-border .right-box .user .userr::-moz-placeholder {
   color: gold;
   padding: 10px;
   padding-top: 15px;
   font-size: 1.5em;
 }
-body .border .inner-border .right-box .user #user:-ms-input-placeholder {
+body .border .inner-border .right-box .user .userr:-ms-input-placeholder {
   color: gold;
   padding: 10px;
   padding-top: 15px;
   font-size: 1.5em;
 }
-body .border .inner-border .right-box .user #user::placeholder {
+body .border .inner-border .right-box .user .userr::placeholder {
   color: gold;
   padding: 10px;
   padding-top: 15px;
   font-size: 1.5em;
+}
+body .border .inner-border .right-box .user .selectuser {
+  width: 85%;
+  transition: 1s;
+  box-shadow: 1px 3px 4px 2px black;
 }
 body .border .inner-border .right-box .email {
   margin: 10px;
@@ -158,20 +318,28 @@ body .border .inner-border .right-box .email {
   align-items: center;
   flex-direction: row;
   height: 15%;
-  font-size: 2em;
+  font-size: 1.2em;
+  transition: 0.4s;
+}
+@media (max-width: 1244px) {
+  body .border .inner-border .right-box .email {
+    margin: 30px;
+  }
 }
 body .border .inner-border .right-box .email #emailIcon {
   width: 15%;
   height: 70%;
-  border: 2px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font-size: 1.5em;
+  font-size: 1.3em;
+  border: 3px solid gold;
+  box-shadow: 0px 3px 1px 2px black;
   padding: 10px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  cursor: pointer;
 }
 @media (max-width: 737px) {
   body .border .inner-border .right-box .email #emailIcon {
@@ -179,37 +347,47 @@ body .border .inner-border .right-box .email #emailIcon {
   }
 }
 body .border .inner-border .right-box .email #emailIcon #spe {
-  color: red;
+  text-shadow: 3px 3px 3px black;
 }
-body .border .inner-border .right-box .email #email {
+body .border .inner-border .right-box .email #emailIcon:hover {
+  background-color: rgba(88, 83, 83, 0.379);
+}
+body .border .inner-border .right-box .email .emaill {
   background-color: transparent;
-  width: 85%;
+  width: 0%;
   height: 70%;
   margin-right: 5px;
-  border: 2px solid white;
   outline-color: rgb(3, 243, 95);
   outline-width: 2px;
   border: none;
+  border-bottom: 4px solid rgb(200, 255, 0);
+  outline: none;
+  transition: 1s;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-body .border .inner-border .right-box .email #email::-moz-placeholder {
+body .border .inner-border .right-box .email .emaill::-moz-placeholder {
   color: gold;
   padding: 10px;
   padding-top: 15px;
   font-size: 1.5em;
 }
-body .border .inner-border .right-box .email #email:-ms-input-placeholder {
+body .border .inner-border .right-box .email .emaill:-ms-input-placeholder {
   color: gold;
   padding: 10px;
   padding-top: 15px;
   font-size: 1.5em;
 }
-body .border .inner-border .right-box .email #email::placeholder {
+body .border .inner-border .right-box .email .emaill::placeholder {
   color: gold;
   padding: 10px;
   padding-top: 15px;
   font-size: 1.5em;
+}
+body .border .inner-border .right-box .email .selectemail {
+  transition: 1se;
+  width: 85%;
+  box-shadow: 1px 3px 4px 2px black;
 }
 body .border .inner-border .right-box .password {
   margin: 10px;
@@ -220,20 +398,28 @@ body .border .inner-border .right-box .password {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  transition: 0.8s;
+}
+@media (max-width: 1244px) {
+  body .border .inner-border .right-box .password {
+    margin: 30px;
+  }
 }
 body .border .inner-border .right-box .password #passwordIcon {
   width: 15%;
   padding: 5px;
   height: 70%;
   padding: 10px;
-  border: 2px solid white;
+  border: 3px solid gold;
+  box-shadow: 0px 3px 1px 2px black;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font-size: 1.5em;
+  font-size: 1em;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  cursor: pointer;
 }
 @media (max-width: 737px) {
   body .border .inner-border .right-box .password #passwordIcon {
@@ -241,37 +427,48 @@ body .border .inner-border .right-box .password #passwordIcon {
   }
 }
 body .border .inner-border .right-box .password #passwordIcon #spp {
-  color: red;
+  text-shadow: 3px 3px 3px black;
 }
-body .border .inner-border .right-box .password #password {
+body .border .inner-border .right-box .password #passwordIcon:hover {
+  background-color: rgba(88, 83, 83, 0.379);
+}
+body .border .inner-border .right-box .password .passwordd {
   background-color: transparent;
-  width: 85%;
+  width: 0%;
   height: 70%;
+  outline: none;
   margin-right: 5px;
   border: 2px solid white;
   outline-color: rgb(3, 243, 95);
   outline-width: 2px;
   border: none;
+  transition: 1.2s;
+  border-bottom: 4px solid rgb(200, 255, 0);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-body .border .inner-border .right-box .password #password::-moz-placeholder {
+body .border .inner-border .right-box .password .passwordd::-moz-placeholder {
   color: gold;
   padding: 10px;
   padding-top: 15px;
   font-size: 1.5em;
 }
-body .border .inner-border .right-box .password #password:-ms-input-placeholder {
+body .border .inner-border .right-box .password .passwordd:-ms-input-placeholder {
   color: gold;
   padding: 10px;
   padding-top: 15px;
   font-size: 1.5em;
 }
-body .border .inner-border .right-box .password #password::placeholder {
+body .border .inner-border .right-box .password .passwordd::placeholder {
   color: gold;
   padding: 10px;
   padding-top: 15px;
   font-size: 1.5em;
+}
+body .border .inner-border .right-box .password .selectpassword {
+  transition: 1s;
+  width: 85%;
+  box-shadow: 1px 3px 4px 2px black;
 }
 body .border .inner-border .right-box .forget {
   margin: 10px;
@@ -283,10 +480,17 @@ body .border .inner-border .right-box .forget {
   flex-direction: row;
   font-weight: 400;
   font-size: 1.1em;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Sevillana", cursive;
+}
+@media (max-width: 1244px) {
+  body .border .inner-border .right-box .forget {
+    margin: 30px;
+  }
 }
 body .border .inner-border .right-box .forget h1 a {
-  color: blue;
+  color: rgb(22, 155, 237);
+  text-decoration: none;
+  text-shadow: 2px 2px 2px black;
 }
 body .border .inner-border .right-box .forget h1 a:hover {
   color: red;
@@ -301,9 +505,14 @@ body .border .inner-border .right-box .login {
   width: 90%;
   height: 15%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
+}
+@media (max-width: 1244px) {
+  body .border .inner-border .right-box .login {
+    margin: 30px;
+  }
 }
 body .border .inner-border .right-box .login .loginbutton {
   display: flex;
@@ -312,26 +521,46 @@ body .border .inner-border .right-box .login .loginbutton {
   flex-direction: row;
   font-size: 1.3em;
   text-transform: uppercase;
-  width: 50%;
+  width: 40%;
   height: 70%;
-  background-color: rgba(6, 243, 89, 0.772);
-  border: 2px solid rgb(12, 228, 12);
+  background: linear-gradient(rgba(49, 49, 251, 0.518), rgba(170, 0, 255, 0.468), rgba(0, 110, 255, 0.436));
+  border: 2px solid rgba(0, 0, 0, 0.514);
   border-radius: 20px;
   transition: 1.2s;
   cursor: pointer;
-  box-shadow: 2px 2px 1px 1px white, 4px 4px 2px 2px rgb(82, 76, 76);
+  box-shadow: 2px 2px 1px 1px black, 4px 4px 2px 2px rgb(82, 76, 76);
 }
 body .border .inner-border .right-box .login .loginbutton:hover {
-  background-color: rgba(6, 243, 89, 0.274);
-  box-shadow: 2px 2px 1px 1px white, 4px 4px 2px 2px rgb(82, 76, 76);
+  background: linear-gradient(rgba(49, 49, 251, 0.142), rgba(170, 0, 255, 0.838), rgba(0, 110, 255, 0.269));
+  box-shadow: 2px 2px 1px 1px black, 4px 4px 2px 2px rgb(82, 76, 76);
 }
 @media (max-width: 737px) {
   body .border .inner-border .right-box .login .loginbutton {
     font-size: 0.8em;
   }
 }
+body .border .inner-border .right-box .login .signbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  width: 40%;
+  height: 70%;
+  background: linear-gradient(rgba(12, 228, 12, 0.413), rgba(12, 228, 160, 0.477), rgba(188, 228, 12, 0.4));
+  border: 2px solid rgba(0, 0, 0, 0.674);
+  border-radius: 20px;
+  transition: 1.2s;
+  cursor: pointer;
+  box-shadow: 2px 2px 1px 1px black, 4px 4px 2px 2px rgb(82, 76, 76);
+}
+body .border .inner-border .right-box .login .signbutton:hover {
+  background: linear-gradient(rgba(12, 228, 12, 0.731), rgba(12, 228, 160, 0.735), rgba(188, 228, 12, 0.74));
+}
 @media (max-width: 1244px) {
   body .border .inner-border .right-box {
     width: 90%;
+    height: 900px;
   }
 }/*# sourceMappingURL=index.css.map */
